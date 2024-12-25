@@ -15,7 +15,7 @@ contract MerkleTest is Test {
 
     function setUp () external {
         deployer = new MerkleDeploy();
-        (bagelToken,merkleAirdrop,root) = deployer.run();
+        (bagelToken,merkleAirdrop,root) = deployer.deployMerkleAirdrop();
     }
 
     function testTokenInformation() external view {

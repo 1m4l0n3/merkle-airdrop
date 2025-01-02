@@ -1,17 +1,22 @@
-## Foundry
+# BagelToken Airdrop Project
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This project consists of two smart contracts, **BagelToken** and **MerkleAirdrop**, that work together to create an ERC20 token and facilitate a Merkle-based airdrop distribution of the tokens.
 
-Foundry consists of:
+---
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## What is the project about?
+The project implements:
+1. **BagelToken**: A custom ERC20 token named "Bagel Token" (symbol: BT) with minting functionality restricted to the contract owner.
+2. **MerkleAirdrop**: A contract that enables secure and efficient token distribution using a Merkle tree. Users can claim their allocated tokens by proving their inclusion in the Merkle tree.
 
-## Documentation
+---
 
-https://book.getfoundry.sh/
+## What is a Merkle-based airdrop?
+A Merkle-based airdrop uses a **Merkle tree** data structure to verify the eligibility of participants. Instead of storing all participant data on-chain, a Merkle root is stored. Participants provide a proof (Merkle proof) to verify their eligibility and claim their tokens.
+
+This approach reduces gas costs and ensures secure and scalable token distribution.
+
+---
 
 ## Usage
 

@@ -18,6 +18,19 @@ This approach reduces gas costs and ensures secure and scalable token distributi
 
 ---
 
+## Key Features
+### BagelToken Contract
+- ERC20-compliant token named "Bagel Token" with minting functionality.
+- Minting is restricted to the contract owner, ensuring controlled token supply.
+
+### MerkleAirdrop Contract
+- Enables token distribution to eligible users via Merkle proofs.
+- Prevents double-claims using a mapping to track claimed addresses.
+- Emits an event `Claim` for transparency and tracking.
+- Uses OpenZeppelin's `SafeERC20` for secure token transfers.
+
+---
+
 ## Usage
 
 ### Build

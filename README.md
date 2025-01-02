@@ -31,6 +31,24 @@ This approach reduces gas costs and ensures secure and scalable token distributi
 
 ---
 
+## Contract and Function Details
+
+### BagelToken.sol
+
+1. **`mint(address account, uint256 amount)`**
+    - Allows the owner to mint tokens to a specified address.
+    - **Access Control**: Only callable by the contract owner.
+
+### MerkleAirdrop.sol
+1. **`claim(address account, uint256 amount, bytes32[] calldata merkleProof)`**
+    - Allows eligible participants to claim their tokens by providing a valid Merkle proof.
+    - **Reverts**:
+        - If the proof is invalid (`MerkleAirdrop__InvalidProof`).
+        - If the user has already claimed (`MerkleAirdrop__HasAlreadyClaimed`).
+    - Emits a `Claim` event and transfers tokens to the user.
+
+---
+
 ## Usage
 
 ### Build
